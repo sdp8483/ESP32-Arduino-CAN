@@ -13,6 +13,15 @@ This is a rewrite of the original library created by [miwagner](https://github.c
 ## Usage
 See the examples in the [/examples](examples) folder.
 
+## Enable Debug Messages
+To eanble debug messages on the serial terminal set `ESP32CAN_DEBUG` to `1` using build flags. 
+
+In platformio adding the following to `platformio.ini` will enable debug messages:
+```
+build_flags = 
+    -D ESP32CAN_DEBUG=1
+```
+
 ## Espressif IDF Documentation
 The Espressif IDF documentation at the link below should be reference first if you encounter any errors. Make sure you are using the most recent IDF version, V5.0 when writing this. 
 

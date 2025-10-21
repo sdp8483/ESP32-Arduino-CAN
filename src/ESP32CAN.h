@@ -6,10 +6,12 @@
 #include "driver/twai.h"
 
 /* Defines ------------------------------------------------------------------- */
-#define ESP32CAN_DEBUG     /* serial print debug info */
+#ifndef ESP32CAN_DEBUG          /* to enable debug messages define this using build flags */
+#define ESP32CAN_DEBUG      0   /* set to 1 to serial print debug info */
+#endif
 
 /* Macros -------------------------------------------------------------------- */
-#ifdef ESP32CAN_DEBUG
+#if ESP32CAN_DEBUG
 #define debugPrint(x) 	    Serial.print(x)
 #define debugPrintln(x)	    Serial.println(x)
 #else
